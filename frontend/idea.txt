@@ -1,0 +1,30 @@
+1. Primary Color
+
+    Purpose: The main brand color. Used for prominent elements like logos, headings, primary buttons, and links.
+    Selection Tip: Choose the most dominant or recognizable color from the logo.
+
+2. Secondary Color
+
+    Purpose: Complements the primary color, often used for less prominent elements like backgrounds, secondary buttons, and illustrations.
+    Selection Tip: Pick a color that pairs well with the primary color, creating balance and contrast.
+
+3. Accent Color
+
+    Purpose: Highlights key elements like call-to-action buttons, icons, or alerts to grab attention.
+    Selection Tip: A bold or contrasting color that stands out from both the primary and secondary colors.
+
+4. Neutral (Light)
+
+    Purpose: A light, subtle color used for backgrounds, forms, or dividers to provide structure without distracting.
+    Selection Tip: Choose a pale or muted shade derived from the logo or a neutral tone like white, light gray, or beige.
+
+5. Neutral (Dark)
+
+    Purpose: For text, borders, or dark backgrounds. It ensures readability and adds depth.
+    Selection Tip: A darker tone, often a shade of gray, black, or a muted color from the logo.
+
+6. Support/Highlight Color
+
+    Purpose: A versatile color for additional highlights, hover states, or other minor elements. It can also be used as an alternate accent.
+    Selection Tip: Pick a color from the logo that complements the palette but isn’t overpowering.
+
