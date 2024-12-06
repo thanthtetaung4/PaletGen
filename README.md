@@ -1,4 +1,4 @@
-# YOUR PROJECT TITLE PaletGen
+# PROJECT TITLE PaletGen
 
 #### Video Demo: [Your Video URL](<URL HERE>)
 
