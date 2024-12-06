@@ -51,20 +51,18 @@ class ColorPalette implements ThemeColors {
   }
 }
 
-export function InputDemo() {
-  return <Input type="email" placeholder="Email" />;
-}
-
 export default function Home() {
   const [prompt, setPrompt] = useState<string>("");
   const [img, setImg] = useState<File | null>(null);
   const [result, setResult] = useState<ThemeColors | null>(null);
   const [paletteName, setPaletteName] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
 
   const submitPrompt = async (e: FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setIsError(false);
 
     if (!prompt && !img) {
       alert("Please provide a prompt or upload an image.");
@@ -94,8 +92,8 @@ export default function Home() {
           highlight,
         } = parsedData.colors;
         setPaletteName(parsedData.paletteName);
-        console.log(parsedData);
-        console.log(typeof data);
+        // console.log(parsedData);
+        // console.log(typeof data);
         // Update state with the result
         const palette = new ColorPalette(
           primary,
@@ -112,6 +110,7 @@ export default function Home() {
       }
     } catch (error) {
       console.error("Error:", error);
+      setIsError(true);
     } finally {
       setIsLoading(false);
     }
@@ -176,6 +175,13 @@ export default function Home() {
           )}
         </form>
       </div>
+
+      <div className={!isError ? "hidden" : "flex justify-center"}>
+        <h2 className="text-lg lg:text-xl font-bold text-red-500">
+          Error Talking to the server
+        </h2>
+      </div>
+
       <div className={!result ? "hidden" : "block"}>
         {!isLoading && (
           <div className="flex flex-col justify-center items-center mt-5">
