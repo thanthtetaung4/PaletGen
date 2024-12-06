@@ -48,7 +48,7 @@ def generate_palette():
         """
         result = model.generate_content([prompt, image_pil])
         palette = re.search(r'(\{.*\})', result.text, re.DOTALL).group(1)
-    elif not image and prompt:
+    elif not image and f_prompt:
         prompt = f"""create a color palette based on {f_prompt} in JSON format and without any description of the color.
         Use this exact JSON schema not more than this:
 
@@ -68,7 +68,7 @@ def generate_palette():
         result = model.generate_content(prompt)
         # palette = result.text.split('{', 1)[1].rsplit('}', 1)[0]
         palette = re.search(r'(\{.*\})', result.text, re.DOTALL).group(1)
-    elif not prompt and image:
+    elif not f_prompt and image:
         image_pil = Image.open(image)
         prompt = f"""create a color palette based on the colors from provided image in JSON format and without any description of the color.
         Use this JSON schema:
