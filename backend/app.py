@@ -26,8 +26,8 @@ def generate_palette():
     image = request.files.get('image')
 
     # Debug prints
-    print(f"Received Prompt: {f_prompt}")
-    if image and prompt:
+    # print(f"Received Prompt: {f_prompt}")
+    if image and f_prompt:
 
         print(f"Received Image: {image.filename}")
         image_pil = Image.open(image)
