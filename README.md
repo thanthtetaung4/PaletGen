@@ -1,6 +1,6 @@
 # PROJECT TITLE PaletGen
 
-#### Video Demo: [Your Video URL](<URL HERE>)
+#### Video Demo: https://youtu.be/WO91xEQGMUw
 
 #### Description:
 
